@@ -3,6 +3,7 @@ package com.atguigu.jedis;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
+import redis.clients.jedis.ListPosition;
 
 /**
  * Jedis
@@ -30,6 +31,8 @@ public class JedisDemo {
         //jedis.set()
         //jedis.get()
         //.....
+
+        jedis.linsert("a" , ListPosition.BEFORE, "" , "");
         jedis.close();
     }
 
